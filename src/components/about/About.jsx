@@ -14,7 +14,7 @@ const About = () => {
             <div className="about__data">
                 <Info/>
                 <p className="about__description">
-                    Frontend and Backend developer, I create web pages and App, I have one years of experience and many clients are happy with the projects carried out.
+                    Frontend and Backend developer, I create web pages and Apps, I have a year of proven experience on the <a href="https://www.workana.com/freelancer/0df79c95451d649b1cab1ffd2c1e1d45" className='workana'> workana</a> website and projects made on GitHub.
                 </p>
                 <a download="" href={CV} className="button button--felx">Download CV
                 <svg
