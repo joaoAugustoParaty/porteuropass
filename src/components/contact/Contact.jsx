@@ -67,7 +67,7 @@ const Contact = () => {
                         <input 
                         type="text" 
                         name="name"
-                        className="text name contact__form-input" placeholder='Insert your name' />
+                        className="text name contact__form-input" placeholder='Insert your name' required />
                     </div>
 
                     <div className="contact__form-div">
@@ -75,7 +75,7 @@ const Contact = () => {
                         <input 
                         type="email" 
                         name="email"
-                        className="text name contact__form-input" placeholder='Insert your email' />
+                        className="text name contact__form-input" placeholder='Insert your email' required/>
                     </div>
 
                     <div className="contact__form-div contact__form-area">
