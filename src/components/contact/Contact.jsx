@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import "./contact.css"
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm(
+      'service_vmodb2k', 
+      'template_m378koi',
+       form.current,
+       'KeHBa5o-2qM2id9s_'
+       )
+     e.target.reset()
+  };
+
   return (
     <section className="contact section" id="contact">
         <h2 className="section__title">Get in touch</h2>
@@ -15,7 +32,7 @@ const Contact = () => {
                         <i className="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Email</h3>
-                        <span className="contact__card-data">user@gmail.com</span>
+                        <span className="contact__card-data">joaodrow@gmail.com</span>
 
                         <a href="joaodrow@gmail.com" className="contact__button">Write me {""}<i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
@@ -44,7 +61,7 @@ const Contact = () => {
             <div className="contact__content">
                 <h3 className="contact__title">Write me your project</h3>
 
-                <form className="contact__form">
+                <form ref={form} onSubmit={sendEmail} className="contact__form">
                     <div className="contact__form-div">
                         <label className="contact__form-tag">Name</label>
                         <input 
@@ -54,7 +71,7 @@ const Contact = () => {
                     </div>
 
                     <div className="contact__form-div">
-                        <label className="contact__form-tag">Mail</label>
+                        <label className="contact__form-tag">Email</label>
                         <input 
                         type="email" 
                         name="email"
